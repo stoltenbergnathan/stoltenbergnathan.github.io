@@ -30,17 +30,29 @@
             dignissimos rem aliquid quaerat.
           </h5>
           <div>
-            <button>Github</button>
-            <button>Linkedin</button>
-            <nav>
-              <ul>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Projects</a></li>
-              </ul>
-            </nav>
+            <a href="https://github.com/stoltenbergnathan"
+              ><img
+                src="./assets/icons8-github-64.png"
+                alt="github logo"
+                height="32px"
+                width="32px"
+            /></a>
+            <a href=""
+              ><img
+                src="./assets/5296501_linkedin_network_linkedin logo_icon.png"
+                alt="linkedin logo"
+                height="32px"
+                width="32px"
+            /></a>
           </div>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#previousWork">Previous Work</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </article>
-        <div class="col">
+        <div class="col-lg-9">
           <div id="about">
             <h2>Nathan Stoltenberg</h2>
             <h4>Student at Portland State University</h4>
@@ -51,9 +63,80 @@
               accusantium vitae optio soluta hic.
             </p>
           </div>
-          <div id="previousWork"></div>
-          <div id="projects"></div>
-          <div id="contact"></div>
+          <div id="previousWork">
+            <h3>Previous Work</h3>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed,
+            cumque. Unde repudiandae incidunt qui molestias laboriosam natus
+            quibusdam nesciunt porro cumque, omnis tempore officiis suscipit
+            accusamus vitae ullam libero. Repudiandae!
+          </div>
+          <div id="projects">
+            <h3>Projects</h3>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed,
+            cumque. Unde repudiandae incidunt qui molestias laboriosam natus
+            quibusdam nesciunt porro cumque, omnis tempore officiis suscipit
+            accusamus vitae ullam libero. Repudiandae!
+          </div>
+          <div id="contact">
+            <h3>Contact Me</h3>
+            <form
+              class="form-group"
+              enctype="text/plain"
+              action="https://docs.google.com/forms/d/e/1FAIpQLScbWRKaTEOxBF7u1oa18ikBbWyS3dFUcLiMQ15vQIg4LvnCkA/formResponse?"
+              target="hidden_iframe"
+              onsubmit="submitted=true;"
+            >
+              <div class="row">
+                <div class="col">
+                  <label for="entry.1801763039">First Name:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="entry.1801763039"
+                    id="entry.1801763039"
+                    placeholder="Enter First Name"
+                  />
+                </div>
+                <div class="col">
+                  <label for="entry.781901012">Last Name:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="entry.781901012"
+                    id="entry.781901012"
+                    placeholder="Enter Last Name"
+                  />
+                </div>
+                <div class="col">
+                  <label for="entry.1056001441">Email:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="entry.1056001441"
+                    id="entry.1056001441"
+                    placeholder="Enter Email"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="entry.271353285">Body:</label>
+                <textarea
+                  class="form-group"
+                  name="entry.271353285"
+                  id="entry.271353285"
+                  placeholder="Enter Message"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="reset" class="btn btn-secondary">Reset</button>
+            </form>
+            <iframe
+              name="hidden_iframe"
+              id="hidden_iframe"
+              style="display: none"
+              onload="if(submitted) {}"
+            ></iframe>
+          </div>
         </div>
       </div>
     </main>
