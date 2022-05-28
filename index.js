@@ -8,6 +8,6 @@ results = fetch("https://api.github.com/users/stoltenbergnathan/repos", {
     results.forEach(repo => {
         console.log(repo)
 
-        projects.innerHTML += repo.name + '<br/>' + repo.description + '<br/>' + repo.html_url + '<br/>' + new Date(repo.created_at).toDateString() + '<br />'
+        projects.innerHTML += `<a href='${repo.html_url}' target=blank>${repo.name}</a>` + '<br/>' + repo.description + '<br/>' + new Date(repo.created_at).toDateString() + '<br />'
     });
 })
