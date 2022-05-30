@@ -39,6 +39,6 @@ results = fetch("https://api.github.com/users/stoltenbergnathan/repos", {
         repo.description +
         "<br/>" +
         new Date(repo.created_at).toDateString() +
-        "<br />";
+        "<br /><br />";
     });
   });
