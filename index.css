@@ -2,15 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #0a9396;
+  background-color: #ff010125;
 }
 
 main {
-  background-color: #2e899b;
+  background-color: #000000d2;
 }
 
 body {
-  color: #001219;
+  color: #ffffff;
 }
 
 #sidebar > img {
@@ -23,7 +23,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: #001219;
+  color: #ffffff;
 }
 
 ul {
@@ -34,7 +34,7 @@ ul {
 }
 
 form {
-  background-color: #d8dad3;
+  background-color: #d8dad32b;
   padding: 1%;
   border-radius: 25px;
 }
@@ -44,4 +44,12 @@ textarea {
   display: block;
   width: 100%;
   margin-bottom: 1%;
+}
+
+#resumeButton {
+  border-radius: 10px;
+}
+
+#resumeButton:hover {
+  opacity: 50%;
 }

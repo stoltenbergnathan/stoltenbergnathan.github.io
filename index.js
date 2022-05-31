@@ -1,12 +1,5 @@
 const descriptions = {
-  Viewpoint: [
-    "Viewpoint was my first ever internship. " +
-      "While working here as an intern I wrote QA tests for our software and manage an Azure CI/CD pipeline. " +
-      "I also wrote a POC software to compare documents with different PDF versions for their structural integerity. " +
-      "During my last couple months I started working on cleanup scripts to remove uneccesary resources and reduce the " +
-      "company's expenses",
-    "Skills",
-  ],
+  Viewpoint: ["June 2021 - December 2021", "Skills"],
   Tripwire: ["T", "skills"],
 };
 
