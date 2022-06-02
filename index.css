@@ -1,16 +1,31 @@
+/* 
+TODO
+- day / night mode
+- previous work buttons need to be different
+- skills gained needs to be centered
+*/
+
+:root {
+  --sidebar-color: #4b2626;
+  --main-bg-color: #2d2d2d;
+  --accent1-color: #585260;
+  --accent2-color: #707070;
+  --main-text-color: #ffffff;
+}
+
 #sidebar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ff010125;
+  background-color: var(--sidebar-color);
 }
 
 main {
-  background-color: #000000d2;
+  background-color: var(--main-bg-color);
 }
 
 body {
-  color: #ffffff;
+  color: var(--main-text-color);
 }
 
 #sidebar > img {
@@ -23,7 +38,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--main-text-color);
 }
 
 ul {
@@ -34,7 +49,7 @@ ul {
 }
 
 form {
-  background-color: #d8dad32b;
+  background-color: var(--accent2-color);
   padding: 1%;
   border-radius: 25px;
 }
@@ -47,9 +62,23 @@ textarea {
 }
 
 #resumeButton {
+  color: var(--main-text-color);
   border-radius: 10px;
+  background-color: var(--accent1-color);
 }
 
 #resumeButton:hover {
   opacity: 50%;
+}
+
+.githubProject {
+  background-color: var(--accent1-color);
+  margin-top: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.githubProject > a > h6 {
+  font-size: larger;
 }

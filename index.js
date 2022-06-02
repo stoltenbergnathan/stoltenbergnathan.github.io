@@ -52,14 +52,51 @@ results = fetch("https://api.github.com/users/stoltenbergnathan/repos", {
   .then((body) => body.json())
   .then((results) => {
     results.forEach((repo) => {
-      console.log(repo);
-
       projects.innerHTML +=
-        `<a href='${repo.html_url}' target=blank>${repo.name}</a>` +
+        `<div class="githubProject"><a href='${repo.html_url}' target=blank><h6>${repo.name}</h6></a>` +
         "<br/>" +
         repo.description +
         "<br/>" +
         new Date(repo.created_at).toDateString() +
-        "<br /><br />";
+        "</div>";
     });
   });
+
+const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+const root = document.documentElement;
+if (darkThemeMq.matches) {
+  root.style.setProperty("--sidebar-color", "#4b2626");
+  root.style.setProperty("--main-bg-color", "#2d2d2d");
+  root.style.setProperty("--accent1-color", "#585260");
+  root.style.setProperty("--accent2-color", "#707070");
+  root.style.setProperty("--main-text-color", "#ffffff");
+} else {
+  root.style.setProperty("--sidebar-color", "#8D818C");
+  root.style.setProperty("--main-bg-color", "#E9EBF8");
+  root.style.setProperty("--accent1-color", "#A5A299");
+  root.style.setProperty("--accent2-color", "#B4B8C5");
+  root.style.setProperty("--main-text-color", "#1e1b1e");
+}
+darkThemeMq.addEventListener("change", (e) => {
+  if (e.matches) {
+    root.style.setProperty("--sidebar-color", "#4b2626");
+    root.style.setProperty("--main-bg-color", "#2d2d2d");
+    root.style.setProperty("--accent1-color", "#585260");
+    root.style.setProperty("--accent2-color", "#707070");
+    root.style.setProperty("--main-text-color", "#ffffff");
+  } else {
+    root.style.setProperty("--sidebar-color", "#8D818C");
+    root.style.setProperty("--main-bg-color", "#E9EBF8");
+    root.style.setProperty("--accent1-color", "#A5A299");
+    root.style.setProperty("--accent2-color", "#B4B8C5");
+    root.style.setProperty("--main-text-color", "#1e1b1e");
+  }
+});
+
+// :root {
+//   --sidebar-color: #4b2626;
+//   --main-bg-color: #2d2d2d;
+//   --accent1-color: #585260;
+//   --accent2-color: #707070;
+//   --main-text-color: #ffffff;
+// }
