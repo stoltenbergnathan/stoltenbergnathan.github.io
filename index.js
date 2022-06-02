@@ -62,41 +62,33 @@ results = fetch("https://api.github.com/users/stoltenbergnathan/repos", {
     });
   });
 
-const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
-const root = document.documentElement;
-if (darkThemeMq.matches) {
-  root.style.setProperty("--sidebar-color", "#4b2626");
-  root.style.setProperty("--main-bg-color", "#2d2d2d");
-  root.style.setProperty("--accent1-color", "#585260");
-  root.style.setProperty("--accent2-color", "#707070");
-  root.style.setProperty("--main-text-color", "#ffffff");
-} else {
+const setDayMode = () => {
   root.style.setProperty("--sidebar-color", "#8D818C");
   root.style.setProperty("--main-bg-color", "#E9EBF8");
   root.style.setProperty("--accent1-color", "#A5A299");
   root.style.setProperty("--accent2-color", "#B4B8C5");
   root.style.setProperty("--main-text-color", "#1e1b1e");
+};
+
+const setNightMode = () => {
+  root.style.setProperty("--sidebar-color", "#4b2626");
+  root.style.setProperty("--main-bg-color", "#2d2d2d");
+  root.style.setProperty("--accent1-color", "#585260");
+  root.style.setProperty("--accent2-color", "#707070");
+  root.style.setProperty("--main-text-color", "#ffffff");
+};
+
+const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+const root = document.documentElement;
+if (darkThemeMq.matches) {
+  setNightMode();
+} else {
+  setDayMode();
 }
 darkThemeMq.addEventListener("change", (e) => {
   if (e.matches) {
-    root.style.setProperty("--sidebar-color", "#4b2626");
-    root.style.setProperty("--main-bg-color", "#2d2d2d");
-    root.style.setProperty("--accent1-color", "#585260");
-    root.style.setProperty("--accent2-color", "#707070");
-    root.style.setProperty("--main-text-color", "#ffffff");
+    setNightMode();
   } else {
-    root.style.setProperty("--sidebar-color", "#8D818C");
-    root.style.setProperty("--main-bg-color", "#E9EBF8");
-    root.style.setProperty("--accent1-color", "#A5A299");
-    root.style.setProperty("--accent2-color", "#B4B8C5");
-    root.style.setProperty("--main-text-color", "#1e1b1e");
+    setDayMode();
   }
 });
-
-// :root {
-//   --sidebar-color: #4b2626;
-//   --main-bg-color: #2d2d2d;
-//   --accent1-color: #585260;
-//   --accent2-color: #707070;
-//   --main-text-color: #ffffff;
-// }
