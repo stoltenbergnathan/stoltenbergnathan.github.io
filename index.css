@@ -1,6 +1,5 @@
 /* 
 TODO
-- previous work buttons need to be different
 - links for projects need to highlight differently
 */
 
@@ -80,4 +79,24 @@ textarea {
 
 .githubProject > a > h6 {
   font-size: larger;
+}
+
+#previousWork {
+  height: 300px;
+}
+
+.section {
+  margin-bottom: 5%;
+}
+
+.prevwork:hover {
+  font-size: x-large;
+  opacity: 60%;
+}
+
+.prevwork {
+  margin-top: 15%;
+  background-color: var(--accent2-color);
+  padding: 5px;
+  border-radius: 15px;
 }
