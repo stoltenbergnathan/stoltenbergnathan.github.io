@@ -1,8 +1,3 @@
-/* 
-TODO
-- links for projects need to highlight differently
-*/
-
 :root {
   --sidebar-color: #4b2626;
   --main-bg-color: #2d2d2d;
@@ -79,6 +74,12 @@ textarea {
 
 .githubProject > a > h6 {
   font-size: larger;
+}
+
+.githubProject > a:hover {
+  opacity: 60%;
+  color: var(--main-text-color);
+  text-decoration: underline;
 }
 
 #previousWork {
