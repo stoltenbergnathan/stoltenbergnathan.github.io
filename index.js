@@ -1,12 +1,12 @@
 const descriptions = {
   Viewpoint: [
-    `Dates Employeed: June 2021 - December 2021
+    `<p>Dates Employeed: June 2021 - December 2021</p>
       <p>
       Viewpoint was the first software company I worked at. 
       Here I used Selenium to run UI tests while also using Azure resources to manage system cleanup
       </p>`,
-    `Skills Gained
-      <ul>
+    `<ul>
+        <li style="text-decoration: underline;">Skills Gained</li>
         <li>Selenium Testing</li>
         <li>Azure Pipelines</li>
         <li>Azure Cloud Systems</li>
@@ -15,13 +15,13 @@ const descriptions = {
       </ul>`,
   ],
   Tripwire: [
-    `Dates Employeed: January 2022 - June 2022
+    `<p>Dates Employeed: January 2022 - June 2022</p>
       <p>
       My second and last internship before graduating. Here I worked as a DevOps intern managing
       a full-stack application. I also migrated this application to a K8s cluster
       </p>`,
-    `Skills Gained
-      <ul>
+    `<ul>
+        <li style="text-decoration: underline;">Skills Gained</li>
         <li>React</li>
         <li>FastApi</li>
         <li>Graphql</li>
