@@ -26,6 +26,12 @@ body {
 
 #sidebar > img {
   margin-bottom: 5%;
+  border-radius: 50px;
+}
+
+#sidebar > hr {
+  border: 1px solid var(--main-text-color);
+  width: 100%;
 }
 
 ul {
